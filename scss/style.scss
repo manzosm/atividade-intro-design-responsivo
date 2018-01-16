@@ -1,0 +1,17 @@
+$container: 1200px;
+* {
+    box-sizing: border-box;
+}
+
+.item {
+    background-color: tomato;
+}
+
+.container {
+    max-width: $container;
+    margin: 0 auto;
+    
+}
+
+
+@import "grid";

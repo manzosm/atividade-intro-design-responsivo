@@ -1,0 +1,40 @@
+$quantidadeGrid: 12;
+
+
+.row::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.col {
+    position: relative;
+    min-height: 1px;
+    padding: 0 10px;
+    float: left;
+    margin: 10px 0;
+
+}
+
+@for $i from 1 through $quantidadeGrid {
+    .col-#{$i} {
+        width: (($i / $quantidadeGrid) * 100)+%;
+    }
+}
+
+
+@media (max-width: 500px) {
+    @for $i from 1 through $quantidadeGrid {
+        .col-#{$i} {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    @for $i from 1 through $quantidadeGrid {
+        .col-#{$i} {
+            width: 50%;
+        }
+    }
+}
